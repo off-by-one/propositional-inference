@@ -1,0 +1,7 @@
+((not My) (Im))
+((not Im) (My))
+((My) (Mam))
+((not Im) (H))
+((not Mam) (H))
+((not H) (Mag))
+((not My))
