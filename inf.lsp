@@ -96,11 +96,11 @@
 ;; both left and right clauses are lists of literals
 (defun infer-on-clauses (cl-l cl-r)
   (loop for sub-cl-l on cl-l
-        for lft-iter = (length sub-cl-l)
+        for lft-iter from (length cl-l) downto 1
         append
           (remove-if #'null
             (loop for sub-cl-r on cl-r
-                  for rgt-iter = (length sub-cl-r)
+                  for rgt-iter from (length cl-r) downto 1
                   if (equal (car sub-cl-l) (negate (car sub-cl-r)))
                   collect
                     (standard-clausal-form
