@@ -17,9 +17,9 @@
 ;;;
 ;;; Basic usage is (print-knowledge (make-inferences (read-kbdb "filename")))
 ;;; Knowledge base must have one clause per line, example:
-;;;   (not A) (B) (C)
-;;;   (not C) (D)
-;;;   (not D) (Q)
+;;;   ((not A) (B) (C))
+;;;   ((not C) (D))
+;;;   ((not D) (Q))
 ;;; 
 ;;; TODO: Read actual CNF files
 ;;;       Improve efficiency with an ordered set type, to avoid dup inferences
